@@ -1,0 +1,39 @@
+---
+
+const EQUIPOS = [
+  {
+    title: "Grabadora Tascam DR-70D",
+    description: "Grabadora de audio de 4 canales",
+  },
+  {
+    title: "Boom Sennheiser MKH 416 P48",
+    description: "Micrófono de cañón",
+  },
+  {
+    title: "2 Lavalier Sennheiser EW512P G4 c/ cápsulas Sennheiser MKE2 Gold",
+    description: "Micrófono de solapa",
+  },
+  {
+    title: "Lavalier Sennheiser AVX c/ cápsula Sennheiser MKE2 Gold",
+    description: "Micrófono de solapa",
+  },
+  {
+    title: "Pértiga Rode Boompole Pro",
+    description: "Pértiga de micrófono",
+  },
+];
+
+---
+
+<ul id="equipos" class="border custom-shadow-ex p-2">
+  {
+    EQUIPOS.map(({ title, description }) => (
+      <li class="p-2 text-sm hover:bg-myGray ">
+        <h3 id="description" class="font-bold text-xl">
+          {title}
+        </h3>
+        <p id="description" class="text-gray-200">{description}</p>
+      </li>
+    ))
+  }
+</ul>
