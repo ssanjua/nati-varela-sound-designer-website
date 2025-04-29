@@ -7,51 +7,35 @@ import DescargarButton from "./buttons/DescargarButton.astro";
 
 <div class="flex gap-5 border mx-5 mb-20 p-1 md:p-5">
   <div class="flex items-center">
-    <a class="cursor-pointer" aria-label="Ver el curriculum de Paula Pallares">
       <img
-        src="./pau_cv.webp"
+        src="./contact.png"
         id="profile-picture"
         class="hidden md:block md:max-w-[250px] h-auto"
         alt="curriculum de paula pallares"
       />
-    </a>
     <div class="m-5">
-      <p class="descripcion-text text-sm text-wrap mb-4">
-        <span class=""
-          >Puedes chequear mi CV aquí. Si tienes algún proyecto o quieres saber algo más de mi, no dudes en contactarme, me encanta colaborar, aprender y conocer gente con la que crecer. Actualmente me encantaría sumarme a alguna productora o canal de televisión. 
-        </span>
-      </p>
-      <p>
-        <span class="font-thin text-sm "
-          >Los roles que más desempeñé (y disfruto) en rodaje son:<br /></span
-        >
-        <span class="font-bold text-myPink">
-          DIRECCIÓN Y ASISTENCIA DE DIRECCIÓN | CÁMARA Y 2DA DE CÁMARA |
-          ASISTENCIA DE PRODUCCIÓN
-        </span>
-      </p>
       <p class="flex items-center my-2">
         <MobileIcon class="size-4 mr-1" />
         <a
           href="tel:+34613526623"
-          class="text-sm hover:font-bold text-gray-200 hover:text-white transition-all duration-300 ease-in-out"
+          class="text-xl hover:font-bold text-gray-200 hover:text-white transition-all duration-300 ease-in-out"
         >
-          +34613526623</a
+          +34613612805</a
         >
       </p>
       <div class="flex items-center mb-2">
         <EmailIcon class="size-4 mr-1" />
         <a
-          href="mailto:ppaupallares@gmail.com"
+          href="mailto:nataliavarelagr@gmail.com"
           class="text-smhover:font-bold text-gray-200 hover:text-white transition-all duration-300 ease-in-out"
         >
-          ppaupallares@gmail.com</a
+          nataliavarelagr@gmail.com</a
         >
       </div>
       <div class="flex items-center mb-5">
         <MapIcon class="size-4 mr-1" />
         <p class="text-sm text-gray-200">
-          Currently based in <span class="font-bold">Barcelona, Spain</span>
+          Actualmente en <span class="font-bold">Barcelona, Spain</span>
         </p>
       </div>
       <div class="flex justify-center m-5">
@@ -71,19 +55,3 @@ import DescargarButton from "./buttons/DescargarButton.astro";
     </div>
   </div>
 </div>
-
-<script is:inline>
-  const image = document.getElementById("profile-picture");
-
-  image.addEventListener("click", () => {
-    if (!document.fullscreenElement) {
-      image.requestFullscreen().catch((err) => {
-        console.error(
-          `Error al intentar activar el modo de pantalla completa: ${err.message}`,
-        );
-      });
-    } else {
-      document.exitFullscreen();
-    }
-  });
-</script>
