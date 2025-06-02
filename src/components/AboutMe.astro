@@ -3,7 +3,47 @@ import ProfilePicture from "./ProfilePicture.astro";
 import SocialLinks from "./SocialsLinks.astro";
 ---
 
-<div class="flex flex-col md:flex-row items-center justify-center m-5 gap-8">
+<div class="flex flex-row items-center justify-center m-5 gap-4 md:hidden">
+  <div class="flex-shrink-0 block">
+    <ProfilePicture
+      class="h-60 rounded-xl transition-transform duration-300 hover:scale-101"
+    />
+  </div>
+    <div class="flex flex-col gap-4 w-full md:w-2/3">
+      <h3 class="text-2xl md:text-5xl font-bold flex items-center mt-2 md:mt-3">
+        NATALIA VARELA GRAFFIGNA
+      </h3>
+      <div class="flex items-center gap-x-2 md:gap-x-4">
+        <div>
+          <h4
+            class="text-black text-xs bg-white pl-2 pr-2 py-1 rounded-r-full transition-all hover:scale-102 ease-in-out duration-300"
+          >
+            > SONIDO DIRECTO / POSTPRODUCCIÓN DE SONIDO
+          </h4>
+        </div>
+        <div class="hidden md:block">
+          <SocialLinks />
+        </div>
+      </div>
+      <div class="my-2 md:hidden">
+        <SocialLinks />
+      </div>
+    </div>
+</div>
+<div class="flex flex-col items-center justify-center m-5 gap-8 md:hidden">
+  <h2 class="descripcion-text max-w-[900px] text-pretty mr-1 md:mr-10">
+    <span id="description" class="font-light leading-7">
+      Sonidista y editora de sonido con experiencia en la industria audiovisual.
+      Me especializo en la captura de sonido directo y en la postproducción de
+      audio. Soy una profesional apasionada por el sonido y la música, con
+      habilidades en la edición de audio y la mezcla de sonido. Mi objetivo es
+      trabajar en proyectos que me permitan seguir creciendo y aprendiendo en el
+      mundo del sonido y la postproducción.
+    </span>
+  </h2>
+</div>
+
+<div class="hidden md:flex flex md:flex-row items-center justify-center m-5 gap-8">
   <div class="flex-shrink-0 hidden md:block">
     <ProfilePicture class=" md:h-80 rounded-xl transition-transform duration-300 hover:scale-101" />
   </div>
@@ -14,7 +54,7 @@ import SocialLinks from "./SocialsLinks.astro";
     <div class="flex items-center gap-x-2 md:gap-x-4">
       <div>
         <h4
-          class="text-black bg-white pl-2 pr-2 rounded-r-full transition-all hover:scale-102 ease-in-out duration-300"
+          class="text-black bg-white pl-2 pr-2 rounded-r-full py-1 transition-all hover:scale-102 ease-in-out duration-300"
         >
          > SONIDO DIRECTO / POSTPRODUCCIÓN DE SONIDO
         </h4>
@@ -27,7 +67,7 @@ import SocialLinks from "./SocialsLinks.astro";
       <SocialLinks />
     </div>
     <h2 class="descripcion-text max-w-[900px] text-pretty mr-1 md:mr-10">
-      <span id="description" class="font-regular leading-7">
+      <span id="description" class="font-light leading-7">
         Sonidista y editora de sonido con experiencia en la industria audiovisual. 
         Me especializo en la captura de sonido directo y en la postproducción de audio. 
         Soy una profesional apasionada por el sonido y la música, con habilidades en la 
